@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,6 +20,7 @@ import com.STS.Entity.Customer;
 import com.STS.Model.JwtResponse;
 import com.STS.Service.StockManagement;
 import com.STS.ValidDation.AddStockValidation;
+
 
 @RestController
 public class StockAddController {
@@ -57,6 +59,7 @@ public class StockAddController {
 
 	}
 
+	@CrossOrigin("*")
 	@GetMapping("/getAllProduct")
 	public JwtResponse<?> getAllProduct(
 			@RequestParam(value = "pageNumber", defaultValue = "1", required = false) Integer pageNumber,

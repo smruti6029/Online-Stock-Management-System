@@ -2,7 +2,7 @@ package com.STS.Model;
 
 public class JwtResponse<T> {
 
-private Object meassage;
+private String meassage;
 
 private Object response;
 
@@ -12,7 +12,7 @@ public Object getMeassage() {
 	return meassage;
 }
 
-public void setMeassage(Object meassage) {
+public void setMeassage(String meassage) {
 	this.meassage = meassage;
 }
 
@@ -37,7 +37,7 @@ public JwtResponse() {
 	// TODO Auto-generated constructor stub
 }
 
-public JwtResponse(Object meassage, Object response, Integer id) {
+public JwtResponse(String meassage, Object response, Integer id) {
 	super();
 	this.meassage = meassage;
 	this.response = response;

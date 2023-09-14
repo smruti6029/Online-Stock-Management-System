@@ -12,11 +12,16 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.thymeleaf.spring5.SpringTemplateEngine;
+import org.thymeleaf.templatemode.TemplateMode;
+import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
 @Configuration
 @PropertySource("classpath:database.properties")
@@ -67,6 +72,48 @@ public class AppContext {
 		transactionManager.setSessionFactory(sessionFactory);
 		return transactionManager;
 	}
+	
+	
+//	@Bean
+//	public JavaMailSender mailSender() {
+//		JavaMailSender mailSender = new JavaMailSenderImpl();
+//		((JavaMailSenderImpl) mailSender).setHost("smtp.gmail.com");
+//		((JavaMailSenderImpl) mailSender).setPort(587);
+//		((JavaMailSenderImpl) mailSender).setUsername("smrutiranjan.rapidsoft@gmail.com");
+//		((JavaMailSenderImpl) mailSender).setPassword("euazxwycfrrdeggt");
+//
+//		Properties properties = new Properties();
+//		properties.setProperty("mail.smtp.auth", "true");
+//		properties.setProperty("mail.smtp.starttls.enable", "true");
+//		return ((JavaMailSenderImpl) mailSender);
+//	}
+	
+	
+	
+	@Bean
+    public JavaMailSender javaMailSender() {
+        JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
+        mailSender.setHost("smtp.gmail.com");
+        mailSender.setPort(587);
+        mailSender.setUsername("smruti97761@gmail.com");
+        mailSender.setPassword("obvpfvyzvlbuydnb");
+
+        Properties properties = new Properties();
+        properties.setProperty("mail.smtp.auth", "true");
+        properties.setProperty("mail.smtp.starttls.enable", "true");
+
+        mailSender.setJavaMailProperties(properties);
+
+        return mailSender;
+    }
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

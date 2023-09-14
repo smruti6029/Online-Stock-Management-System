@@ -86,7 +86,7 @@ public class CustomerServiceImp implements CustomerService {
 			}
 		}
 
-		return 0;
+		return null;
 	}
 
 }

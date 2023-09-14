@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Invoice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #e6e6e6;
+        }
+
+        tr:hover {
+            background-color: #d4d4d4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ordered</h1>
+    <table>
+        <thead>
+            <tr>
+                <th style="background-color: #007bff; color: white;">Name</th>
+                <th style="background-color: #007bff; color: white;">Address</th>
+                <th style="background-color: #007bff; color: white;">Product Name</th>
+                <th style="background-color: #007bff; color: white;">Order Id</th>
+                <th style="background-color: #007bff; color: white;">Product Type</th>
+                <th style="background-color: #007bff; color: white;">Phone Number</th>
+                <th style="background-color: #007bff; color: white;">Date of Sale</th>
+                <th style="background-color: #007bff; color: white;">Product Brand</th>
+                <th style="background-color: #007bff; color: white;">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="stock : ${stockList}">
+                <td th:text="${stock.name}"></td>
+                <td th:text="${stock.address}"></td>
+                <td th:text="${stock.product_name}"></td>
+                <td th:text="${stock.productId}"></td>
+                <td th:text="${stock.product_type}"></td>
+                <td th:text="${stock.phoneNo}"></td>
+                <td th:text="${stock.dateofSale}"></td>
+                <td th:text="${stock.product_brand}"></td>
+                <td th:text="${stock.price}"></td>
+            </tr>
+            
+            <tr>
+                <td colspan="8" style="text-align: right;"><strong>Total:</strong></td>
+                <td th:text="${stock.price}"></td> ->
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+

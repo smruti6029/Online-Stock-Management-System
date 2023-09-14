@@ -58,7 +58,6 @@ public class StockAvilableDto {
 
 	public StockAvilableDto() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	
 	

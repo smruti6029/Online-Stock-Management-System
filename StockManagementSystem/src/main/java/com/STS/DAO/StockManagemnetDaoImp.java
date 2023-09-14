@@ -43,6 +43,7 @@ public class StockManagemnetDaoImp implements StockManagemnetDao {
 		return save;
 	}
 
+	
 	@Override
 	public List<StockManage> getAllproduct() {
 		Criteria createCriteria = sessionFactory.getCurrentSession().createCriteria(StockManage.class);
@@ -79,6 +80,20 @@ public class StockManagemnetDaoImp implements StockManagemnetDao {
 
 		return response;
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 
 	@Override

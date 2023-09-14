@@ -4,9 +4,12 @@
 /home/rapidsoft/Documents/Spring_Security/StockManagementSystem/src/main/java/com/STS/Controller/StockAddController.java
 /home/rapidsoft/Documents/Spring_Security/StockManagementSystem/src/main/java/com/STS/Config/WebConfig.java
 /home/rapidsoft/Documents/Spring_Security/StockManagementSystem/src/main/java/com/STS/Secutity/SecurityInsitalizer.java
+/home/rapidsoft/Documents/Spring_Security/StockManagementSystem/src/main/java/com/STS/Config/CorsFilter.java
+/home/rapidsoft/Documents/Spring_Security/StockManagementSystem/src/main/java/com/STS/Config/CorsFilterInitializer.java
 /home/rapidsoft/Documents/Spring_Security/StockManagementSystem/src/main/java/com/STS/DAO/CustomerDao.java
 /home/rapidsoft/Documents/Spring_Security/StockManagementSystem/src/main/java/com/STS/Entity/Customer.java
 /home/rapidsoft/Documents/Spring_Security/StockManagementSystem/src/main/java/com/STS/Service/CustomerService.java
+/home/rapidsoft/Documents/Spring_Security/StockManagementSystem/src/main/java/com/STS/MailService/Pdfgenerate.java
 /home/rapidsoft/Documents/Spring_Security/StockManagementSystem/src/main/java/com/STS/Service/StockManagement.java
 /home/rapidsoft/Documents/Spring_Security/StockManagementSystem/src/main/java/com/STS/Config/AppContext.java
 /home/rapidsoft/Documents/Spring_Security/StockManagementSystem/src/main/java/com/STS/Entity/StockManage.java
@@ -24,6 +27,7 @@
 /home/rapidsoft/Documents/Spring_Security/StockManagementSystem/src/main/java/com/STS/DAO/StockManagemnetDaoImp.java
 /home/rapidsoft/Documents/Spring_Security/StockManagementSystem/src/main/java/com/STS/Model/JwtRequest.java
 /home/rapidsoft/Documents/Spring_Security/StockManagementSystem/src/main/java/com/STS/Enum/Role.java
+/home/rapidsoft/Documents/Spring_Security/StockManagementSystem/src/main/java/com/STS/pdf/DocumentGEnerator.java
 /home/rapidsoft/Documents/Spring_Security/StockManagementSystem/src/main/java/com/STS/Model/JwtResponse.java
 /home/rapidsoft/Documents/Spring_Security/StockManagementSystem/src/main/java/com/STS/Controller/JwtController.java
 /home/rapidsoft/Documents/Spring_Security/StockManagementSystem/src/main/java/com/STS/Config/ServletInitializer.java
